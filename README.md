@@ -43,7 +43,7 @@ Suite de pruebas E2E con **Playwright + TypeScript** para un flujo de login con 
 
 ## Cómo correrlo
 
-Requisitos: **Node.js 20+**
+Requisitos: **Node.js 20+** y Mailpit (con Docker o instalado directo)
 
 ```bash
 # 1. Instalar dependencias y el navegador
@@ -51,7 +51,11 @@ npm install
 npx playwright install chromium
 
 # 2. Levantar el buzón de email local (Mailpit)
+# Opción A: Docker
 npm run mail:up
+# Opción B: instalación directa (Mac/Linux)
+sudo bash < <(curl -sL https://raw.githubusercontent.com/axllent/mailpit/develop/install.sh)
+mailpit
 
 # 3. Correr los tests (la app demo se levanta sola)
 npm test
