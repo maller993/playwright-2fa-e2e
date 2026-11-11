@@ -18,8 +18,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      # Cuando subas package-lock.json al repo, cambiá esto por: npm ci
-      - run: npm install
+      
+      - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test
       - uses: actions/upload-artifact@v4
