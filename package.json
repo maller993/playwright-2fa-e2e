@@ -1,0 +1,22 @@
+{
+  "name": "playwright-2fa-e2e",
+  "version": "1.0.0",
+  "description": "E2E web con Playwright + TypeScript: login con doble factor por email, validado contra un buzón real (Mailpit)",
+  "scripts": {
+    "app": "node demo-app/server.js",
+    "mail:up": "docker compose up -d",
+    "mail:down": "docker compose down",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.0"
+  }
+}

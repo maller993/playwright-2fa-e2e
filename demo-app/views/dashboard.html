@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account · Demo Bank</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Welcome</h1>
+    <p class="lead" id="who"></p>
+    <button type="button" id="logout">Log out</button>
+  </main>
+  <script>
+    fetch('/api/me').then(async (res) => {
+      if (!res.ok) { location.href = '/'; return; }
+      const { email } = await res.json();
+      document.getElementById('who').textContent = 'Signed in as ' + email;
+    });
+    document.getElementById('logout').addEventListener('click', async () => {
+      const res = await fetch('/api/logout', { method: 'POST' });
+      const data = await res.json();
+      location.href = data.next;
+    });
+  </script>
+</body>
+</html>

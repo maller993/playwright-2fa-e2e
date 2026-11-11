@@ -1,0 +1,8 @@
+# Buzón de email local para las pruebas.
+# SMTP en :1025 (lo usa la app demo) y UI/API HTTP en :8025 (la usan los tests).
+services:
+  mailpit:
+    image: axllent/mailpit
+    ports:
+      - "1025:1025"
+      - "8025:8025"
