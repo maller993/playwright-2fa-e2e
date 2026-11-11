@@ -43,7 +43,7 @@ Suite de pruebas E2E con **Playwright + TypeScript** para un flujo de login con 
 
 ## Cómo correrlo
 
-Requisitos: **Node.js 20+** y **Docker** (para Mailpit).
+Requisitos: **Node.js 20+**
 
 ```bash
 # 1. Instalar dependencias y el navegador
