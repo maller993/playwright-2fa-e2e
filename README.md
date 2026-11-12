@@ -19,9 +19,7 @@ Suite de pruebas E2E con **Playwright + TypeScript** para un flujo de login con 
 
 ## Arquitectura
 
-```
 ![2FA E2E Architecture](./assets/mermaid-diagram.png)
-```
 
 ## Escenarios cubiertos
 
