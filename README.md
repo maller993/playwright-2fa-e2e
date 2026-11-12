@@ -20,13 +20,7 @@ Suite de pruebas E2E con **Playwright + TypeScript** para un flujo de login con 
 ## Arquitectura
 
 ```
-<div align="center">
-  <img
-    src="./assets/mermaid-diagram.png"
-    alt="2FA E2E Architecture"
-    width="85%"
-  />
-</div>
+![2FA E2E Architecture](./assets/mermaid-diagram.png)
 ```
 
 ## Escenarios cubiertos
