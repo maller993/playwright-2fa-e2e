@@ -20,12 +20,13 @@ Suite de pruebas E2E con **Playwright + TypeScript** para un flujo de login con 
 ## Arquitectura
 
 ```
-┌──────────────┐   HTTP    ┌──────────────┐   SMTP :1025   ┌──────────────┐
-│  Playwright  │ ────────▶ │   App demo   │ ─────────────▶ │   Mailpit    │
-│   (tests)    │           │ (Node :3000) │                │ (buzón local)│
-└──────┬───────┘           └──────────────┘                └──────┬───────┘
-       │                  API HTTP :8025: lee el código del email │
-       └───────────────────────────────────────────────────────────┘
+<div align="center">
+  <img
+    src="./assets/mermaid-diagram.png"
+    alt="2FA E2E Architecture"
+    width="85%"
+  />
+</div>
 ```
 
 ## Escenarios cubiertos
